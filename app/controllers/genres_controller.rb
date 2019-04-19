@@ -14,8 +14,19 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
-  end    
+  end
 
+  def new
+    @genre = Genre.new
+  end
+
+  def index
+    @genre = Genre.all
+  end
+
+  def edit
+    @genre = Genre.find(params[:id])
+  end    
 
   private
 
